@@ -172,12 +172,12 @@ a:hover { color: var(--ink); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 1.1rem;
   min-height: 4rem;
   padding-block: .6rem;
 }
 
-.brand { display: flex; align-items: baseline; gap: .6rem; text-decoration: none; color: var(--ink); }
+.brand { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); flex: 0 1 auto; min-width: 0; }
 .brand__full {
   font-family: var(--font-mono);
   font-size: .68rem;
@@ -185,11 +185,12 @@ a:hover { color: var(--ink); }
   text-transform: uppercase;
   color: var(--ink-3);
 }
-@media (max-width: 46rem) { .brand__full { display: none; } }
+@media (max-width: 74rem) { .brand__full { display: none; } }
 
-.nav { display: flex; align-items: center; gap: 1.4rem; }
+.nav { display: flex; align-items: center; gap: 1.25rem; flex: 0 0 auto; }
 .nav a {
   font-size: .875rem;
+  white-space: nowrap;
   color: var(--ink-2);
   text-decoration: none;
   padding-block: .25rem;
@@ -199,6 +200,8 @@ a:hover { color: var(--ink); }
 @media (max-width: 58rem) { .nav { display: none; } }
 
 .theme-toggle {
+  flex: 0 0 auto;
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: .68rem;
   letter-spacing: .08em;
@@ -690,7 +693,7 @@ a:hover { color: var(--ink); }
 .episode__watch:hover { color: var(--ink); text-decoration: underline; text-underline-offset: .2em; }
 
 /* --- Social in the masthead: present on every page, at every width ------- */
-.masthead__end { display: flex; align-items: center; gap: .85rem; }
+.masthead__end { display: flex; align-items: center; gap: .85rem; flex: 0 0 auto; }
 
 .masthead__social {
   display: flex;
@@ -698,17 +701,27 @@ a:hover { color: var(--ink); }
   gap: .7rem;
   padding-right: .95rem;
   border-right: 1px solid var(--rule);
+  flex: 0 0 auto;
 }
 /* Sized and coloured to sit level with the nav links, not below them */
 .masthead__social a {
   display: inline-flex;
+  flex: 0 0 auto;
   color: var(--ink-2);
   border-radius: 4px;
   transition: color .15s ease;
 }
 .masthead__social a:nth-child(1):hover { color: var(--fb); }
 .masthead__social a:nth-child(2):hover { color: var(--yt); }
-.masthead__icon { width: 1.5rem; height: 1.5rem; display: block; }
+/* The global `svg { max-width: 100% }` would let a squeezed flex parent
+   collapse these to a dot, so they opt out of it and refuse to shrink. */
+.masthead__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  max-width: none;
+  flex: 0 0 auto;
+  display: block;
+}
 
 /* --- Follow block ------------------------------------------------------- */
 .sociallinks {
