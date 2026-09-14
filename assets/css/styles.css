@@ -178,13 +178,6 @@ a:hover { color: var(--ink); }
 }
 
 .brand { display: flex; align-items: baseline; gap: .6rem; text-decoration: none; color: var(--ink); }
-.brand__mark {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: var(--green);
-}
 .brand__full {
   font-family: var(--font-mono);
   font-size: .68rem;
@@ -756,3 +749,22 @@ a:hover { color: var(--ink); }
 .sociallink__arrow { color: var(--ink-3); font-size: 1.1rem; flex: 0 0 auto; }
 .sociallink:hover .sociallink__arrow { color: var(--ink); }
 @media (max-width: 30rem) { .sociallink__arrow { display: none; } }
+
+/* --- Brand logo: one variant per theme, switched on the same tokens ------ */
+.brand__logo {
+  height: 2.5rem;
+  width: auto;
+  display: block;
+  flex: 0 0 auto;
+}
+.brand__logo--dark { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .brand__logo--light { display: none; }
+  :root:not([data-theme="light"]) .brand__logo--dark  { display: block; }
+}
+:root[data-theme="dark"] .brand__logo--light { display: none; }
+:root[data-theme="dark"] .brand__logo--dark  { display: block; }
+
+.brand { gap: .7rem; }
+@media (max-width: 26rem) { .brand__logo { height: 2.1rem; } }

@@ -24,6 +24,8 @@ apply.html          Mentee and mentor calls, and the contact form
 
 assets/css/styles.css   All styling. Design tokens at the top of the file.
 assets/js/main.js       Theme toggle only.
+assets/img/             Logo, social preview and touch icon
+favicon.ico             16/32/48, the B monogram
 .nojekyll               Tells GitHub Pages to serve the files as-is
 ```
 
@@ -65,7 +67,21 @@ Content is plain HTML — there is no CMS.
 | Form links | search all pages for `forms.gle` |
 | A new video | `podcast.html`, the `EPISODES`-shaped `.episode` blocks — newest first |
 | Social links | three places, all duplicated per page: `masthead__social` (header), `sociallinks` (home page block), `social` (footer) |
+| The logo | `assets/img/logo.png` and `logo-dark.png` — **two variants**, one per theme. Replace both together. |
+| Social preview card | `assets/img/og.png`, 1200×630 |
 | Colours, fonts, spacing | `assets/css/styles.css`, the `:root` token block |
+
+### The logo
+
+The masthead shows `logo.png` in light themes and `logo-dark.png` in dark ones,
+switched in CSS on the same tokens as everything else. Two files are needed
+because the logo's "SR" is dark charcoal, which disappears on a dark ground —
+the dark variant remaps the charcoal and green to the dark-theme ink and accent
+and leaves the red alone.
+
+Both were derived from a flat JPEG by keying out its background, so the edges
+carry slight softness. **If a vector or transparent original exists, use it** —
+regenerate both variants and the favicon from that instead.
 
 ### Brand colours
 
