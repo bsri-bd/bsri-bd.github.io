@@ -695,19 +695,20 @@ a:hover { color: var(--ink); }
 .masthead__social {
   display: flex;
   align-items: center;
-  gap: .55rem;
-  padding-right: .85rem;
+  gap: .7rem;
+  padding-right: .95rem;
   border-right: 1px solid var(--rule);
 }
+/* Sized and coloured to sit level with the nav links, not below them */
 .masthead__social a {
   display: inline-flex;
-  color: var(--ink-3);
+  color: var(--ink-2);
   border-radius: 4px;
   transition: color .15s ease;
 }
 .masthead__social a:nth-child(1):hover { color: var(--fb); }
 .masthead__social a:nth-child(2):hover { color: var(--yt); }
-.masthead__icon { width: 1.15rem; height: 1.15rem; display: block; }
+.masthead__icon { width: 1.5rem; height: 1.5rem; display: block; }
 
 /* --- Follow block ------------------------------------------------------- */
 .sociallinks {
