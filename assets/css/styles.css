@@ -197,7 +197,56 @@ a:hover { color: var(--ink); }
   border-bottom: 1px solid transparent;
 }
 .nav a:hover { color: var(--green); border-bottom-color: var(--green); }
-@media (max-width: 58rem) { .nav { display: none; } }
+/* Below the breakpoint the nav becomes a panel under the bar, opened by the
+   menu button. Without this there is no navigation on a phone at all. */
+.nav-toggle { display: none; }
+
+@media (max-width: 58rem) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    background: transparent;
+    color: var(--ink-2);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .nav-toggle:hover { color: var(--green); border-color: var(--green); }
+  .nav-toggle svg { width: 1.35rem; height: 1.35rem; max-width: none; }
+  .nav-toggle__x { display: none; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__bars { display: none; }
+  .nav-toggle[aria-expanded="true"] .nav-toggle__x { display: block; }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: .35rem var(--gutter) 1rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 12px 24px -18px rgba(0,0,0,.5);
+  }
+  .nav.is-open { display: flex; }
+  .nav a {
+    padding-block: .85rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav a:last-child { border-bottom: 0; }
+  .nav a:hover { border-bottom-color: var(--rule); }
+  .nav a.is-current { color: var(--green); }
+
+}
 
 .theme-toggle {
   flex: 0 0 auto;
@@ -214,6 +263,7 @@ a:hover { color: var(--ink); }
   cursor: pointer;
 }
 .theme-toggle:hover { color: var(--green); border-color: var(--green); }
+.theme-toggle__icon { display: none; }
 
 /* --- Buttons ------------------------------------------------------------ */
 .btn {
@@ -782,3 +832,28 @@ a:hover { color: var(--ink); }
 
 .brand { gap: .7rem; }
 @media (max-width: 26rem) { .brand__logo { height: 2.1rem; } }
+
+/* --- Mobile control sizing ----------------------------------------------
+   Must come after the base .theme-toggle / .masthead__social rules: at equal
+   specificity the later declaration wins, and an earlier media query loses. */
+@media (max-width: 58rem) {
+  .theme-toggle {
+    width: 2.35rem;
+    height: 2.35rem;
+    padding: 0;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .theme-toggle__label { display: none; }
+  .theme-toggle__icon {
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    max-width: none;
+  }
+
+  .masthead__social { gap: .6rem; padding-right: .75rem; }
+  .masthead__end { gap: .55rem; }
+}

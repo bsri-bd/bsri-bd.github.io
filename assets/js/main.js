@@ -37,3 +37,44 @@
     });
   }
 })();
+
+/* Mobile navigation. The nav is a panel below the bar under 58rem; without
+   this button there is no way to reach the other pages on a phone. */
+(function () {
+  "use strict";
+
+  var btn = document.getElementById("nav-toggle");
+  var nav = document.getElementById("primary-nav");
+  if (!btn || !nav) { return; }
+
+  function setOpen(open) {
+    nav.classList.toggle("is-open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  btn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    setOpen(btn.getAttribute("aria-expanded") !== "true");
+  });
+
+  // Following a link should not leave the panel open behind the new page.
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a")) { setOpen(false); }
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!nav.contains(e.target) && !btn.contains(e.target)) { setOpen(false); }
+  });
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+
+  // Resizing past the breakpoint must not leave a stuck open panel.
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 928) { setOpen(false); }
+  });
+})();
