@@ -1,0 +1,39 @@
+name: Update podcast page from YouTube
+
+# The channel feed is public, so this needs no API key, token or secret.
+on:
+  schedule:
+    - cron: "0 6 * * *"      # daily, 06:00 UTC
+  workflow_dispatch:          # or run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-podcast
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Read the channel feed and rewrite the episode list
+        run: python3 tools/update_podcast.py
+
+      - name: Commit if anything changed
+        run: |
+          if git diff --quiet -- podcast.html; then
+            echo "No change — podcast.html is already current."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add podcast.html
+          git commit -m "Update podcast page from the YouTube channel feed"
+          git push
