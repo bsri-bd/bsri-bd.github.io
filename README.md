@@ -14,12 +14,12 @@ Eight pages. No build step, no dependencies, no framework.
 ```
 index.html          Home — hero, who we are, the organising team, cohorts at a
                     glance, and the two application calls
-how-it-works.html   The four commitments, and how a mentorship runs in practice
+about.html          The organising team, and how to join them
+how-it-works.html   The four commitments, how a mentorship runs, and the code of conduct
 cohorts.html        2025 and 2026 side by side; how a cycle is matched
 mentors.html        The 24 mentors of the 2026 cohort
 mentors-2025.html   The 17 mentors of the 2025 cohort
 podcast.html        The conversation series — episode list is generated
-conduct.html        Code of conduct and how to report a violation
 apply.html          Mentee and mentor calls, and the contact form
 
 assets/css/styles.css   All styling. Design tokens at the top of the file.
@@ -66,7 +66,8 @@ Content is plain HTML — there is no CMS.
 | A 2025 mentor | `mentors-2025.html` — same markup, plus an optional `.mentor__badge` for those mentoring again |
 | Research areas in the hero index | `index.html`, `.fieldindex__list` |
 | Cohort figures | `cohorts.html` and the cards on `index.html` — **both**, they are duplicated |
-| Organising team | `index.html`, the "Who runs it" section |
+| Organising team | `about.html` |
+| Whether a call is open | the `.status` block in `index.html` and `apply.html` — **both**, they are duplicated |
 | Form links | search all pages for `forms.gle` |
 | A new video | Nothing — it appears automatically. To replace its auto-summary with a written one, add an entry to `data/episodes.json`. |
 | Social links | three places, all duplicated per page: `masthead__social` (header), `sociallinks` (home page block), `social` (footer) |
