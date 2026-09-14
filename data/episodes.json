@@ -1,0 +1,18 @@
+{
+  "_comment": "Hand-written summaries. Any video not listed here gets an automatic summary from its YouTube description; replace it with a written one when you can.",
+  "channel_id": "UC3NUPopQIphYxsIHFzHwOkw",
+  "episodes": {
+    "rmHjmCievCY": {
+      "title": "Finding your research path: choosing topics and identifying the right mentors",
+      "summary": "How to start. Picking a topic that lines up with what genuinely interests you, the skills you already have, and where you want to end up — and trying several projects before deciding, because that is how you find out what you actually enjoy. Then the search itself: finding the people working on your topic through the strong journals in the field, Google Scholar and LinkedIn, and weighing more than one signal before deciding someone is worth approaching. It closes on what separates a good mentor from a merely successful researcher, and how to check — talk to their former students, and look at what those students went on to do."
+    },
+    "1emEeDUPDf0": {
+      "title": "BSRI: mission, mentorship, and first intake results",
+      "summary": "The introduction to BSRI. Who the mentors are — their affiliations, career stages and research areas — why the initiative was started, and which students it is meant for. It sets out plainly what a mentee can expect (mentorship, training, research practice, professional development) and what is expected back (time, integrity, collaboration, reproducibility), then reports on the first intake: what was done, what came out of it, and what is being changed for the next cohort."
+    },
+    "QQ7y9CCJnEs": {
+      "title": "Pathway to graduate school, by Sambina Islam Aninta",
+      "summary": "Sambina interviewed at 38 labs across six universities while applying to PhD programs in the US and Canada for Fall 2025, and walks through how she got there: a full-ride scholarship to UBC, a combined honours degree in computer science and biology, building pipelines to mine for novel antimicrobial peptides at the BC Genome Centre, then Amgen, PwC as a cybersecurity consultant, and an MLH Fellowship with Meta. She is now starting a PhD at UBC’s School of Biomedical Engineering."
+    }
+  }
+}

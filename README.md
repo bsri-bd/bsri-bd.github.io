@@ -14,11 +14,11 @@ Eight pages. No build step, no dependencies, no framework.
 ```
 index.html          Home — hero, who we are, the organising team, cohorts at a
                     glance, and the two application calls
-program.html        The four commitments, and how a mentorship runs in practice
+how-it-works.html   The four commitments, and how a mentorship runs in practice
 cohorts.html        2025 and 2026 side by side; how a cycle is matched
 mentors.html        The 24 mentors of the 2026 cohort
 mentors-2025.html   The 17 mentors of the 2025 cohort
-podcast.html        The conversation series — the three published YouTube videos
+podcast.html        The conversation series — episode list is generated
 conduct.html        Code of conduct and how to report a violation
 apply.html          Mentee and mentor calls, and the contact form
 
@@ -26,6 +26,9 @@ assets/css/styles.css   All styling. Design tokens at the top of the file.
 assets/js/main.js       Theme toggle only.
 assets/img/             Logo, social preview and touch icon
 favicon.ico             16/32/48, the B monogram
+data/episodes.json      Hand-written episode summaries, keyed by video id
+tools/update_podcast.py Regenerates the episode list from the channel feed
+.github/workflows/      Runs that script daily
 .nojekyll               Tells GitHub Pages to serve the files as-is
 ```
 
@@ -65,11 +68,32 @@ Content is plain HTML — there is no CMS.
 | Cohort figures | `cohorts.html` and the cards on `index.html` — **both**, they are duplicated |
 | Organising team | `index.html`, the "Who runs it" section |
 | Form links | search all pages for `forms.gle` |
-| A new video | `podcast.html`, the `EPISODES`-shaped `.episode` blocks — newest first |
+| A new video | Nothing — it appears automatically. To replace its auto-summary with a written one, add an entry to `data/episodes.json`. |
 | Social links | three places, all duplicated per page: `masthead__social` (header), `sociallinks` (home page block), `social` (footer) |
 | The logo | `assets/img/logo.png` and `logo-dark.png` — **two variants**, one per theme. Replace both together. |
 | Social preview card | `assets/img/og.png`, 1200×630 |
 | Colours, fonts, spacing | `assets/css/styles.css`, the `:root` token block |
+
+### The podcast page updates itself
+
+`podcast.html` between the `episodes:start` / `episodes:end` markers is
+generated — **do not edit it by hand**, a run will overwrite you. A daily
+GitHub Action reads the channel's public RSS feed and rewrites the list, so a
+new video appears on the site on its own. No API key, token or secret: the feed
+is public and nothing expires.
+
+Summaries in `data/episodes.json` always win. A video with no entry there gets a
+provisional summary from the first sentences of its YouTube description, and the
+run prints its id so you know to write a proper one.
+
+```bash
+python3 tools/update_podcast.py              # update now
+python3 tools/update_podcast.py --check      # fail if the page is stale, write nothing
+python3 tools/update_podcast.py --feed f.xml # run against a saved feed, offline
+```
+
+It never writes an empty list: if the feed is unreachable or returns no
+entries, it exits with an error and leaves the page alone.
 
 ### The logo
 
