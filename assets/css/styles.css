@@ -1107,3 +1107,7 @@ a:hover { color: var(--ink); }
   color: var(--ink-3);
   max-width: 24rem;
 }
+
+/* Three routes need three columns; two in a two-column grid left an orphan. */
+.apply__grid--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 62rem) { .apply__grid--three { grid-template-columns: 1fr; } }
