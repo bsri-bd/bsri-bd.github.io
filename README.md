@@ -27,7 +27,12 @@ assets/js/main.js       Theme toggle only.
 assets/img/             Logo, social preview and touch icon
 favicon.ico             16/32/48, the B monogram
 data/episodes.json      Hand-written episode summaries, keyed by video id
+data/mentors-2026.json  Mentor profiles for the 2026 roster
+data/mentors-2025.json  Mentor profiles for the 2025 roster
+assets/img/mentors/     Mentor portraits, one per mentor, 320x320
 tools/update_podcast.py Regenerates the episode list from the channel feed
+tools/build_mentors.py  Regenerates both mentor rosters from the JSON
+tools/fetch_headshots.sh Pulls portraits from Drive (see below)
 .github/workflows/      Runs that script daily
 .nojekyll               Tells GitHub Pages to serve the files as-is
 ```
@@ -62,8 +67,8 @@ Content is plain HTML — there is no CMS.
 
 | What | Where |
 | --- | --- |
-| A 2026 mentor | `mentors.html` — one `.mentor` block per person |
-| A 2025 mentor | `mentors-2025.html` — same markup, plus an optional `.mentor__badge` for those mentoring again |
+| A mentor's details | `data/mentors-2026.json` or `data/mentors-2025.json`, then run `python3 tools/build_mentors.py`. **Do not edit the roster HTML** — it is generated. |
+| A mentor's portrait | drop a square image at `assets/img/mentors/<name-in-lowercase-with-dashes>.jpg` and rebuild |
 | Research areas in the hero index | `index.html`, `.fieldindex__list` |
 | Cohort figures | `cohorts.html` and the cards on `index.html` — **both**, they are duplicated |
 | Organising team | `about.html` |
@@ -95,6 +100,35 @@ python3 tools/update_podcast.py --feed f.xml # run against a saved feed, offline
 
 It never writes an empty list: if the feed is unreachable or returns no
 entries, it exits with an error and leaves the page alone.
+
+### Mentor rosters are generated
+
+Both roster pages are built from JSON between their `mentors:start` /
+`mentors:end` markers — edit the data, not the HTML:
+
+```bash
+python3 tools/build_mentors.py
+```
+
+A person who mentors in both cohorts is written once, in the 2026 file; the
+2025 file refers to them with `{"ref": true}` and the generator resolves it,
+adding the "Also mentoring in 2026" badge. Use `display_name` where the two
+cohorts recorded a different form of the name.
+
+A mentor with a portrait in `assets/img/mentors/` gets their photo; anyone
+else gets their initials, so a missing file degrades quietly instead of
+showing a broken image.
+
+**Portraits.** The originals are private Google Form uploads. To pull them,
+share the two Form "File responses" folders as *anyone with the link can
+view*, run `bash tools/fetch_headshots.sh`, then revoke the sharing — the
+images live in the repo from then on. The script squares, resizes and
+compresses each one, and skips anything that does not come back as an image,
+so running it while the folders are still private changes nothing.
+
+The Drive file ids live in `data/headshot-sources.local.json`, which is
+gitignored: a Drive id is a capability, not just a label, and this repo is
+public.
 
 ### The logo
 

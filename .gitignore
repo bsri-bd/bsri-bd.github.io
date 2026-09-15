@@ -6,3 +6,7 @@ NOTES.md
 
 # Working notes: unconfirmed claims, internal document names, open questions.
 # Never commit this file — the repo is public.
+
+# Drive file ids for mentor headshots. An id is a capability, not a label —
+# keep them out of a public repo.
+data/headshot-sources.local.json

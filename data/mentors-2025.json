@@ -1,0 +1,222 @@
+{
+  "_comment": "Mentors listed on mentors-2025.html — the 17 who mentored the first cohort. Entries marked {\"ref\": true} are pulled from mentors-2026.json so shared people are written once; they also carry the 'Also mentoring in 2026' badge. Descriptions are condensed from Mentor information for website (Responses) 2025, a form whose stated purpose is the website. Portraits are matched by filename in assets/img/mentors/.",
+  "groups": [
+    {
+      "label": "Computing, AI &amp; interaction",
+      "mentors": [
+        {
+          "name": "Md Kamruzzaman Kamrul",
+          "ref": true
+        },
+        {
+          "name": "Ibrahim Tahmid",
+          "blurb": "Studies how much of a person&rsquo;s thinking can be read from their gaze, and uses eye tracking to build real-time assistants for immersive environments &mdash; along with the design problems such agents raise.",
+          "keywords": [
+            "Augmented &amp; virtual reality",
+            "Human–computer interaction",
+            "Eye tracking",
+            "Human-centered AI"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://iatahmid.github.io/"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=6rSNtPsAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Hasan Mahmud Prottoy",
+          "blurb": "Investigates how people adapt technology to work around infrastructural limits, particularly in the global south, drawing on critical HCI, postcolonial computing and participatory design to make technology design more equitable.",
+          "keywords": [
+            "Human–computer interaction",
+            "CSCW",
+            "Social computing",
+            "ICT for development"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://prottoybd.wixsite.com/website"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=TRyGWSwAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Mostofa Rafid Uddin",
+          "blurb": "Builds unsupervised and self-supervised methods for multi-scale generative modelling of subcellular objects, and adapts them to 2D and 3D biological images.",
+          "keywords": [
+            "Machine learning",
+            "Computational biology",
+            "Computer vision",
+            "Generative modelling"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=csnAp98AAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Sourav Saha",
+          "blurb": "Applies pretrained language models &mdash; transformers and state space models &mdash; to genomics data, particularly post-transcriptional regulatory mechanisms, with earlier research and industry work in Bangla NLP.",
+          "keywords": [
+            "Computational biology",
+            "Large language models",
+            "Natural language processing",
+            "Bangla NLP"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=aWbtDLMAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Kazi Mejbaul Islam",
+          "blurb": "Explores fault attacks on deep neural network accelerators across FPGA, TPU and GPU hardware.",
+          "keywords": [
+            "Hardware security",
+            "Fault attacks",
+            "FPGA",
+            "ML accelerator design"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=vTEYupEAAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Computation in biology &amp; health",
+      "mentors": [
+        {
+          "name": "Abdul Muntakim Rafi",
+          "ref": true
+        },
+        {
+          "name": "Tasnim Islam",
+          "ref": true,
+          "display_name": "Tasnim Nishat Islam"
+        }
+      ]
+    },
+    {
+      "label": "Physics &amp; astronomy",
+      "mentors": [
+        {
+          "name": "Syeda Lammim Ahad",
+          "ref": true
+        },
+        {
+          "name": "Tabassum S Tanvir",
+          "ref": true,
+          "display_name": "Tabassum Shahriar Tanvir"
+        },
+        {
+          "name": "Md Minaruzzaman",
+          "ref": true
+        }
+      ]
+    },
+    {
+      "label": "Materials &amp; nanotechnology",
+      "mentors": [
+        {
+          "name": "Shahriar Muhammad Nahid",
+          "ref": true,
+          "display_name": "Shahriar Nahid"
+        },
+        {
+          "name": "Turash Haque Pial",
+          "blurb": "Models bio and soft materials and nano-microfluidic systems, combining physical chemistry, statistical physics and machine learning. Projects include polyelectrolyte-grafted nanochannels, peptide-amphiphile nanofibre formation, and siRNA payload distribution in lipid nanoparticles.",
+          "keywords": [
+            "Computational materials science",
+            "Soft matter physics",
+            "Microfluidics",
+            "Self-assembly"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=29TXjmoAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Sadman Sadeed Omee",
+          "affil": "PhD candidate &middot; University of South Carolina",
+          "blurb": "Develops graph neural networks, transformers and diffusion models for materials informatics &mdash; crystal structure prediction, property prediction, and generative modelling of materials. The crystal structure problem is a close cousin of protein structure prediction.",
+          "keywords": [
+            "Graph neural networks",
+            "Diffusion models",
+            "Computational materials science",
+            "AI for science"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://www.sadmanomee.com/"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=m-oDmqAAAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Mechanical, energy &amp; transport",
+      "mentors": [
+        {
+          "name": "Rahul Sarker",
+          "ref": true
+        },
+        {
+          "name": "Rahat Mahmud Khan",
+          "blurb": "Works on defrosting and deicing strategies that cut energy use and downtime, studying how frost nucleates and grows across temperature, humidity and surface wettability, and developing electro-thermal defrosting using conductive thin-film coatings.",
+          "keywords": [
+            "Thermal management",
+            "Heat transfer",
+            "Frost nucleation",
+            "Fire dynamics"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=EnHWLIgAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Ahmed Imtiaz Zamee",
+          "blurb": "Works on transportation safety, currently wrong-way driving detection technologies and school bus safety, using statistical analysis, machine learning and video analytics alongside survey data collection.",
+          "keywords": [
+            "Transportation safety",
+            "Autonomous vehicles",
+            "Video analytics",
+            "Transportation policy"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=cW2bmCEAAAAJ"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "_comment": "Mentors listed on mentors.html — the final 2026 cohort. Descriptions are condensed from each mentor's own words in the BSRI Mentor Application Form (Responses); that form's stated purpose is mentor information for the website. Portraits are matched by filename in assets/img/mentors/; the Drive sources live in data/headshot-sources.local.json, which is gitignored because a Drive file id is a capability, not just a label.",
+  "groups": [
+    {
+      "label": "Computing, AI &amp; security",
+      "mentors": [
+        {
+          "name": "Prasun Datta",
+          "affil": "PhD student &middot; Rensselaer Polytechnic Institute",
+          "blurb": "Works on the mathematical foundations of deep learning &mdash; how networks learn representations through gradient-based optimisation, why some learned features generalise, and how adversarial training reshapes hidden layers. The aim is rigorous theory for why deep networks work, when they fail, and how to make them reliable.",
+          "keywords": [
+            "Theoretical deep learning",
+            "Optimization theory",
+            "Representation learning",
+            "Adversarial robustness"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/view/prasun-datta/home"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=g_F0H4UAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Imranur Rahman",
+          "affil": "PhD student &middot; North Carolina State University",
+          "blurb": "Studies software security, particularly the attack surface created by vulnerable dependencies in the software supply chain. His work measures the costs and benefits of different dependency declaration methods as a way of reducing exposure to n-day attacks.",
+          "keywords": [
+            "Software supply chain security",
+            "Vulnerable dependencies",
+            "Empirical software engineering"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://imranur-rahman.github.io/"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=VOSneVwAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Sk Ruhul Azgor",
+          "affil": "PhD student &middot; Pennsylvania State University",
+          "blurb": "Works in theoretical computer science, on approximation algorithms, graph theory, linear graph layouts and dynamic algorithms.",
+          "keywords": [
+            "Approximation algorithms",
+            "Graph theory",
+            "Linear graph layout",
+            "Dynamic algorithms"
+          ],
+          "links": []
+        },
+        {
+          "name": "Rasman Mubtasim Swargo",
+          "affil": "Master&rsquo;s student &middot; Missouri University of Science and Technology",
+          "blurb": "Applies machine learning to systems, focusing on high-performance data transfer across wide-area research networks. He designs adaptive controllers that replace brittle hand-tuned heuristics with reinforcement learning, tested on research testbeds such as FABRIC and CloudLab.",
+          "keywords": [
+            "ML for systems",
+            "Reinforcement learning",
+            "High-performance data transfer",
+            "Network optimization"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://swargo98.github.io"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=6ZhAy7kAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Md Kamruzzaman Kamrul",
+          "affil": "PhD student &middot; Purdue University",
+          "blurb": "Applies machine learning and natural language processing across finance and civil engineering, including large language models for time-series forecasting and deepfake detection, alongside work on the seismic response of soil and embankments.",
+          "keywords": [
+            "Machine learning",
+            "Large language models",
+            "Natural language processing",
+            "Civil engineering"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=uc6urzoAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Ferdous Bin Ali",
+          "affil": "Industry researcher &middot; VISIE Ltd.",
+          "blurb": "Builds multi-agent architectures for domains including fintech and bioinformatics, and is exploring quantum machine learning algorithms.",
+          "keywords": [
+            "Computer vision",
+            "Medical imaging",
+            "Agentic architectures",
+            "Quantum machine learning"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://iknownothing.me/"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Computation in biology &amp; health",
+      "mentors": [
+        {
+          "name": "Abdul Muntakim Rafi",
+          "affil": "PhD student &middot; University of British Columbia",
+          "blurb": "Works on machine learning for regulatory genomics &mdash; predicting how DNA sequence determines gene expression, and what that reveals about the non-coding genome.",
+          "keywords": [
+            "Regulatory genomics",
+            "Computational biology",
+            "Applied machine learning"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=fyNavPkAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Tasnim Islam",
+          "affil": "PhD student &middot; University of Maryland, Baltimore County",
+          "blurb": "Develops machine learning for biomedical signals on wearable devices, including real-time stress detection from ECG and PPG data as a scalable alternative to clinic-based mental health assessment.",
+          "keywords": [
+            "Wearable devices",
+            "Biomedical signals",
+            "Lightweight machine learning",
+            "Digital health"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=suFP0i8AAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Sultan Ahmed",
+          "affil": "PhD student &middot; University of Maryland, Baltimore County",
+          "blurb": "Works across machine learning, cybersecurity and agentic AI, with applications in healthcare.",
+          "keywords": [
+            "Machine learning",
+            "Cybersecurity",
+            "Agentic AI",
+            "Healthcare applications"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/view/sultan1315/home"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=WiN3wC0AAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Physics &amp; astronomy",
+      "mentors": [
+        {
+          "name": "Pranta Saha",
+          "affil": "PhD student &middot; University of California, Davis",
+          "blurb": "Integrates solid-state defects &mdash; excellent spin qubits &mdash; with high-index nanophotonic devices, building hardware for on-chip quantum information processing.",
+          "keywords": [
+            "Quantum nanophotonics",
+            "Spin qubits",
+            "On-chip photonics",
+            "Electromagnetic modelling"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=Uaqf6CkAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Moonzarin Reza",
+          "affil": "PhD student &middot; Texas A&amp;M University",
+          "blurb": "Works at the intersection of machine learning and cosmology, using simulation-based inference to recover cosmological parameters from Type Ia supernova light curves.",
+          "keywords": [
+            "Cosmology",
+            "Simulation-based inference",
+            "Supernova light curves",
+            "Machine learning"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/tamu.edu/moonzarin-astronomy/home"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=xp0DaGoAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Syeda Lammim Ahad",
+          "affil": "Postdoctoral fellow &middot; Waterloo Centre for Astrophysics",
+          "blurb": "Studies how galaxies form and evolve across cosmic time in different environments, using cosmological hydrodynamic simulations and photometric surveys to analyse large samples of galaxies and clusters &mdash; and to ask when, how and why galaxies stop forming stars.",
+          "keywords": [
+            "Extragalactic astronomy",
+            "Galaxy evolution",
+            "Cosmological simulations",
+            "Big data analysis"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=glCxJTAAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Tabassum S Tanvir",
+          "affil": "Postdoctoral researcher &middot; Iowa State University",
+          "blurb": "Studies star and planet formation: how turbulence and initial mass function variations shape stellar birth, and how non-ideal magnetohydrodynamic effects govern protoplanetary disc evolution and the growth of planetary embryos.",
+          "keywords": [
+            "Theoretical astrophysics",
+            "Star formation",
+            "Protoplanetary discs",
+            "Magnetohydrodynamics"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=7GU1tD8AAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Materials &amp; nanotechnology",
+      "mentors": [
+        {
+          "name": "Shahriar Muhammad Nahid",
+          "affil": "Postdoctoral researcher &middot; Stanford University",
+          "blurb": "Probes the physics of low-dimensional materials to build multifunctional opto-electro-mechanical nanodevices, with the goal of unconventional memory, logic and energy-harvesting devices that cut the energy cost of computation.",
+          "keywords": [
+            "Two-dimensional materials",
+            "Quantum materials",
+            "Ferroelectricity",
+            "Scanning probe microscopy"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/view/shahriarmuhammadnahid"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=c9-CAecAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Md Shafayet Ullah Bhuiyan",
+          "affil": "PhD student &middot; Stevens Institute of Technology",
+          "blurb": "Fabricates and characterises nanomaterials experimentally, and models them computationally &mdash; molecular dynamics, finite element analysis, and machine learning applied to mechanical engineering problems.",
+          "keywords": [
+            "Experimental nanomaterials",
+            "Molecular dynamics",
+            "Finite element analysis",
+            "Microscopy"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=y6v5dUQAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Rafsan Al Shafatil Islam Subad",
+          "affil": "PhD student &middot; University of Maryland, College Park",
+          "blurb": "Develops functional nanomaterials and scalable manufacturing for printed and flexible electronics, including metal-free 3D-printable inks from functionalised carbon nanomaterials for RF devices, antennas and sensors. Previously built soft tactile sensors for underwater robotics.",
+          "keywords": [
+            "Additive manufacturing",
+            "Flexible electronics",
+            "Carbon nanomaterials",
+            "Soft robotics"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/view/rafsansubad"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=3_kSGlEAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Md Minaruzzaman",
+          "affil": "PhD student &middot; The Ohio State University",
+          "blurb": "Studies how nuclear materials behave under irradiation, combining theoretical and computational modelling with hands-on experiment so that simulations can be validated against real observations.",
+          "keywords": [
+            "Nuclear materials",
+            "Irradiation damage",
+            "Condensed matter physics",
+            "Computational modelling"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://sites.google.com/view/mdminaruzzaman/about"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=CWGPKQQAAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Mechanical, energy &amp; infrastructure",
+      "mentors": [
+        {
+          "name": "Md Maruf Tahmid",
+          "affil": "Faculty member &middot; Bangladesh Army University of Engineering &amp; Technology",
+          "blurb": "Works on computational fluid dynamics and heat transfer, including conjugate mixed convection and solar air heaters, alongside density functional theory and bio-inspired aerofoil aerodynamics.",
+          "keywords": [
+            "Computational fluid dynamics",
+            "Aerodynamics",
+            "Heat transfer",
+            "Density functional theory"
+          ],
+          "links": []
+        },
+        {
+          "name": "Arafat Anzir",
+          "affil": "PhD student &middot; Texas State University",
+          "blurb": "Works where bio-inspired materials meet computational mechanics and deep learning. He analyses CT scan data of pangolin scales to understand how natural armour achieves damage tolerance, and applies physics-informed neural networks to biomechanical prediction.",
+          "keywords": [
+            "Biomimetics",
+            "Biomechanics",
+            "Solid mechanics",
+            "Physics-informed neural networks"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=moPLOVkAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Nusrat Subah Binte Shakhawat",
+          "affil": "PhD student &middot; Federation University Australia",
+          "blurb": "Builds an integrated framework for power system reliability under rising renewable penetration, and for resilience against increasingly frequent natural disasters &mdash; aimed at flexible distribution systems and microgrids built around distributed energy resources.",
+          "keywords": [
+            "Power system reliability",
+            "Renewable integration",
+            "Microgrids",
+            "Data-driven assessment"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=OmWKsqQAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Rahul Sarker",
+          "affil": "University of Calgary",
+          "blurb": "Uses low-value biomass &mdash; specifically aspen fibre &mdash; in fused filament fabrication to make wood-PLA biocomposites, working on the chemical treatments that let hydrophilic wood fibre bond with a hydrophobic polymer matrix, and on how much fibre a print can carry before it clogs.",
+          "keywords": [
+            "Natural fibre composites",
+            "3D printing",
+            "Life-cycle assessment",
+            "Technoeconomic analysis"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=k3jwUQQAAAAJ"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Earth, environment &amp; urban systems",
+      "mentors": [
+        {
+          "name": "Feroz Islam",
+          "affil": "Postdoctoral researcher &middot; Wageningen University &amp; Research",
+          "blurb": "Works on flood risk and water resources management, climate-smart agriculture and food security, using hydrological models, IoT sensing and data-driven tools to study climate stresses and how to adapt to them.",
+          "keywords": [
+            "Flood risk management",
+            "Water resources",
+            "Climate adaptation",
+            "Hydrological modelling"
+          ],
+          "links": []
+        },
+        {
+          "name": "M. Kifayath Chowdhury",
+          "affil": "PhD student &middot; Delft University of Technology",
+          "blurb": "Studies how climate change reshapes river systems, using data analysis and hydro-morphological modelling. The insights help river managers plan interventions for flood control, freshwater supply and navigation.",
+          "keywords": [
+            "River morphology",
+            "Channel networks",
+            "Climate change",
+            "Hydro-morphological modelling"
+          ],
+          "links": [
+            [
+              "Website",
+              "https://akifayath2009.wixsite.com/home"
+            ],
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=KFLXF_UAAAAJ"
+            ]
+          ]
+        },
+        {
+          "name": "Fajle Rabbi Ashik",
+          "affil": "PhD student &middot; McGill University",
+          "blurb": "Studies how built-environment interventions change travel behaviour and well-being.",
+          "keywords": [
+            "Urban planning",
+            "Transportation",
+            "Travel behaviour",
+            "Statistical analysis"
+          ],
+          "links": [
+            [
+              "Scholar",
+              "https://scholar.google.com/citations?user=TOV0FTsAAAAJ"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
