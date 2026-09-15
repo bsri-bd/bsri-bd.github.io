@@ -130,7 +130,8 @@ live in the repo from then on.
 
 Several mentors submitted environmental or full-body photos, so the script
 crops around the **detected face** (OpenCV YuNet, model fetched on first run)
-rather than the image centre; at the 72px size the site renders, a centre crop
+rather than the image centre. If no face is found at working size it retries on
+an upscaled copy, which is what rescues a small or low-resolution photo; at the 72px size the site renders, a centre crop
 left some faces unrecognisable. Without the model it falls back to a centre
 crop. It skips anything that does not come back as an image, so running it
 while the folders are still private changes nothing.

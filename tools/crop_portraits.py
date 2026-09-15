@@ -44,29 +44,42 @@ def detector():
 
 
 def face_box(det, im):
+    """Largest detected face as (cx, cy, w) in image pixels.
+
+    A small or low-resolution photo can put the face below the detector's
+    floor, so if nothing is found at working size we retry on an upscaled
+    copy before giving up on it.
+    """
     if det is None:
         return None
     import cv2
     import numpy as np
-    small = im.copy()
-    small.thumbnail((640, 640))
-    arr = cv2.cvtColor(np.asarray(small), cv2.COLOR_RGB2BGR)
-    det.setInputSize((arr.shape[1], arr.shape[0]))
-    try:
-        _, faces = det.detect(arr)
-    except Exception:
-        return None
-    if faces is None or len(faces) == 0:
-        return None
-    x, y, w, h = max(faces, key=lambda f: f[2] * f[3])[:4]
-    k = im.width / small.width
-    return ((x + w / 2) * k, (y + h / 2) * k, w * k)
+    for scale in (1, 2, 3, 4):
+        work = im.copy()
+        if scale == 1:
+            work.thumbnail((640, 640))
+        else:
+            work = im.resize((im.width * scale, im.height * scale), Image.LANCZOS)
+            if max(work.size) > 2000:
+                continue
+        arr = cv2.cvtColor(np.asarray(work), cv2.COLOR_RGB2BGR)
+        det.setInputSize((arr.shape[1], arr.shape[0]))
+        try:
+            _, faces = det.detect(arr)
+        except Exception:
+            return None
+        if faces is not None and len(faces):
+            x, y, w, h = max(faces, key=lambda f: f[2] * f[3])[:4]
+            k = im.width / work.width
+            return ((x + w / 2) * k, (y + h / 2) * k, w * k)
+    return None
 
 
 def square(im, box):
     if box:
         cx, cy, fw = box
-        side = min(min(im.size), max(fw * MARGIN, min(im.size) * 0.25))
+        # floor keeps a very small face from being blown up past usefulness
+        side = min(min(im.size), max(fw * MARGIN, min(im.size) * 0.35))
         left, top = cx - side / 2, cy - side * 0.42
     else:
         side = min(im.size)
