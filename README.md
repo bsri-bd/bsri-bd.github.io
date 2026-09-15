@@ -32,7 +32,7 @@ data/mentors-2025.json  Mentor profiles for the 2025 roster
 assets/img/mentors/     Mentor portraits, one per mentor, 320x320
 tools/update_podcast.py Regenerates the episode list from the channel feed
 tools/build_mentors.py  Regenerates both mentor rosters from the JSON
-tools/fetch_headshots.sh Pulls portraits from Drive (see below)
+tools/fetch_headshots.py Pulls portraits from Drive (see below)
 .github/workflows/      Runs that script daily
 .nojekyll               Tells GitHub Pages to serve the files as-is
 ```
@@ -121,10 +121,15 @@ showing a broken image.
 
 **Portraits.** The originals are private Google Form uploads. To pull them,
 share the two Form "File responses" folders as *anyone with the link can
-view*, run `bash tools/fetch_headshots.sh`, then revoke the sharing — the
-images live in the repo from then on. The script squares, resizes and
-compresses each one, and skips anything that does not come back as an image,
-so running it while the folders are still private changes nothing.
+view*, run `python3 tools/fetch_headshots.py`, then revoke the sharing — the images
+live in the repo from then on.
+
+Several mentors submitted environmental or full-body photos, so the script
+crops around the **detected face** (OpenCV YuNet, model fetched on first run)
+rather than the image centre; at the 72px size the site renders, a centre crop
+left some faces unrecognisable. Without the model it falls back to a centre
+crop. It skips anything that does not come back as an image, so running it
+while the folders are still private changes nothing.
 
 The Drive file ids live in `data/headshot-sources.local.json`, which is
 gitignored: a Drive id is a capability, not just a label, and this repo is
