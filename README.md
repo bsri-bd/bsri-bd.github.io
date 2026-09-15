@@ -29,9 +29,13 @@ favicon.ico             16/32/48, the B monogram
 data/episodes.json      Hand-written episode summaries, keyed by video id
 data/mentors-2026.json  Mentor profiles for the 2026 roster
 data/mentors-2025.json  Mentor profiles for the 2025 roster
+data/mentee-stories-2025.json  Selected mentee experiences
 assets/img/mentors/     Mentor portraits, one per mentor, 320x320
+assets/img/mentees/     Mentee portraits for the experiences section
 tools/update_podcast.py Regenerates the episode list from the channel feed
 tools/build_mentors.py  Regenerates both mentor rosters from the JSON
+tools/build_stories.py  Regenerates the mentee experiences on cohorts.html
+tools/crop_portraits.py Face-crops a folder of photos to square portraits
 tools/fetch_headshots.py Pulls portraits from Drive (see below)
 .github/workflows/      Runs that script daily
 .nojekyll               Tells GitHub Pages to serve the files as-is
@@ -134,6 +138,27 @@ while the folders are still private changes nothing.
 The Drive file ids live in `data/headshot-sources.local.json`, which is
 gitignored: a Drive id is a capability, not just a label, and this repo is
 public.
+
+### Mentee experiences
+
+The section on `cohorts.html` is generated from
+`data/mentee-stories-2025.json` between its `stories:start` / `stories:end`
+markers:
+
+```bash
+python3 tools/build_stories.py
+```
+
+Two rules for whoever edits it:
+
+- **The quotations are reproduced exactly as the mentees gave them.** Change
+  the project, affiliation or mentor if they are wrong; never the quote.
+- **It is a selection, not a record.** The lede says these are experiences
+  mentees shared, not the full year. Do not let an edit imply otherwise.
+
+New portraits go through `python3 tools/crop_portraits.py <src-dir>
+assets/img/mentees` so they get the same face-aware square crop as the
+mentors. A mentee without a photo falls back to initials.
 
 ### The logo
 

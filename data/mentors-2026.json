@@ -60,7 +60,7 @@
         {
           "name": "Rasman Mubtasim Swargo",
           "affil": "Master&rsquo;s student &middot; Missouri University of Science and Technology",
-          "blurb": "Applies machine learning to systems, focusing on high-performance data transfer across wide-area research networks. He designs adaptive controllers that replace brittle hand-tuned heuristics with reinforcement learning, tested on research testbeds such as FABRIC and CloudLab.",
+          "blurb": "Applies machine learning to systems, focusing on high-performance data transfer across wide-area research networks, with adaptive controllers that replace brittle hand-tuned heuristics with reinforcement learning &mdash; tested on research testbeds such as FABRIC and CloudLab.",
           "keywords": [
             "ML for systems",
             "Reinforcement learning",
@@ -353,7 +353,7 @@
         {
           "name": "Arafat Anzir",
           "affil": "PhD student &middot; Texas State University",
-          "blurb": "Works where bio-inspired materials meet computational mechanics and deep learning. He analyses CT scan data of pangolin scales to understand how natural armour achieves damage tolerance, and applies physics-informed neural networks to biomechanical prediction.",
+          "blurb": "Works where bio-inspired materials meet computational mechanics and deep learning, analysing CT scan data of pangolin scales to understand how natural armour achieves damage tolerance, and applying physics-informed neural networks to biomechanical prediction.",
           "keywords": [
             "Biomimetics",
             "Biomechanics",
