@@ -1093,3 +1093,17 @@ a:hover { color: var(--ink); }
 }
 .mentor__photo img { width: 100%; height: 100%; max-width: none; object-fit: cover; display: block; }
 .mentor__text { display: flex; flex-direction: column; gap: .3rem; min-width: 0; }
+
+/* --- A call that is not currently open ----------------------------------
+   Sits where the button would, so the card does not look unfinished, but is
+   plainly not something to click. */
+.track__closed {
+  margin-top: .5rem;
+  padding: .6rem .9rem;
+  border: 1px dashed var(--rule-strong);
+  border-radius: 3px;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--ink-3);
+  max-width: 24rem;
+}
