@@ -36,6 +36,7 @@ tools/update_podcast.py Regenerates the episode list from the channel feed
 tools/build_mentors.py  Regenerates both mentor rosters from the JSON
 tools/build_stories.py  Regenerates the mentee experiences on cohorts.html
 tools/crop_portraits.py Face-crops a folder of photos to square portraits
+tools/stamp_assets.py   Cache-busts the CSS and JS links — run after editing either
 tools/fetch_headshots.py Pulls portraits from Drive (see below)
 .github/workflows/      Runs that script daily
 .nojekyll               Tells GitHub Pages to serve the files as-is
@@ -179,6 +180,18 @@ Facebook blue and YouTube red are theme tokens (`--fb`, `--yt`), defined in all
 three theme blocks alongside everything else, and lightened for dark mode so
 they stay legible. They are the only colours on the site outside the palette,
 and they are used only on the social links, where recognition is the point.
+
+### After editing CSS or JS, stamp it
+
+```bash
+python3 tools/stamp_assets.py
+```
+
+Browsers cache `styles.css` hard. Without this, someone who has visited before
+gets the new markup against their old stylesheet — which does not look like a
+caching problem, it looks like a broken page: elements that should stack run
+together on one line, portraits render full width. The stamp appends a hash of
+the file to its URL, so a changed file is a new URL and always gets fetched.
 
 ### Theming
 

@@ -444,6 +444,7 @@ a:hover { color: var(--ink); }
   border-bottom: 1px solid var(--rule);
 }
 .mentor__name {
+  display: block;
   font-family: var(--font-display);
   font-size: var(--step-1);
   font-weight: 500;
@@ -451,6 +452,7 @@ a:hover { color: var(--ink); }
   line-height: 1.25;
 }
 .mentor__fields {
+  display: block;
   font-family: var(--font-mono);
   font-size: .72rem;
   line-height: 1.55;
@@ -520,6 +522,7 @@ a:hover { color: var(--ink); }
 
 /* --- Mentor entry detail ------------------------------------------------ */
 .mentor__affil {
+  display: block;
   font-family: var(--font-body);
   font-size: .82rem;
   line-height: 1.45;
